@@ -177,8 +177,8 @@ class MainViewService {
         
         let queue = DispatchQueue.global(qos: .userInteractive)
         
-        let toCompareImg1 = img1?.createMiniture(image: img1)//img1?.convertToGrayScale(image: img1?.createMiniture(image: img1))
-        let toCompareImg2 = img2?.createMiniture(image: img2)//img2?.convertToGrayScale(image: img2?.createMiniture(image: img2))
+        let toCompareImg1 = img1?.convertToGrayScale(image: img1?.createMiniture(image: img1))
+        let toCompareImg2 = img2?.convertToGrayScale(image: img2?.createMiniture(image: img2))
         
         let pixelImg1 = toCompareImg1?.pixelValuesFromImage(imageRef: toCompareImg1?.cgImage).pixelValues
         let pixelImg2 = toCompareImg2?.pixelValuesFromImage(imageRef: toCompareImg2?.cgImage).pixelValues
